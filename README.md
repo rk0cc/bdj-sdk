@@ -20,6 +20,10 @@ john@localhost:~$ make -C bdj-sdk/target
 ```
 
 ## Usage example
+
+> [!CAUTION]
+> This ISO is no longer playable in current player softwares.
+
 ```console
 john@localhost:~$ make -C bdj-sdk/samples/helloworld
 ```
