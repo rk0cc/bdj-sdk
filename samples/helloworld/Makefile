@@ -24,7 +24,7 @@ MAKEFILE_DIR := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 BDJSDK_HOME  ?= $(MAKEFILE_DIR)/../../
 BDSIGNER     := $(BDJSDK_HOME)/host/bin/bdsigner
 MAKEFS       := $(BDJSDK_HOME)/host/bin/makefs
-JAVA8_HOME    ?= $(BDJSDK_HOME)/host/jdk8
+JAVA8_HOME   ?= $(BDJSDK_HOME)/host/jdk8
 JAVAC        := $(JAVA8_HOME)/bin/javac
 JAR          := $(JAVA8_HOME)/bin/jar
 
@@ -34,9 +34,9 @@ export JAVA8_HOME
 #
 # Compilation artifacts
 #
-CLASSPATH     := $(BDJSDK_HOME)/target/lib/enhanced-stubs.zip
+CLASSPATH     ?= $(BDJSDK_HOME)/target/lib/enhanced-stubs.zip
 SOURCES       := $(wildcard src/org/homebrew/*.java)
-JFLAGS        := -Xlint:-options -source 1.3 -target 1.3
+JFLAGS        := -Xlint:-options -source 1.4 -target 1.4
 
 
 #
